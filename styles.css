@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--neutral);
+}
+
+header {
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #919596;
+    padding: 5px;
+    z-index: 1;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-left: 50%;
+    padding: 15px;
+    font-size: 20px;
+}
+
+
+/* transition to nav-links */
+.nav-links li {
+    transition: all 0.3s ease;
+}
+
+/*  hover effect to nav-links */
+.nav-links li:hover {
+    transform: translateY(-5px);
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: #0f0e17;
+    color: whitesmoke;
+    height: 100vh;
+    width: 100%;
+}
+
+#projects {
+    background-color: grey;
+    color: whitesmoke;
+}
+
+#projects h1 {
+    border-bottom: 5px solid rgb(170, 167, 163);
+    width: fit-content;
+    margin: auto;
+}
+
+#projects .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    padding: 30px;
+    place-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#projects .project-tile {
+    height: 540px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    background-color: black;
+    color: #fffffe;
+    border-radius: 10px;
+    box-shadow: 8px 8px 9px 5px #0f0e17;
+}
+
+#projects .project-tile p {
+    font-size: 20px;
+    padding: 5px;
+}
+
+#projects .project-tile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-tile img:first-child {
+    margin-right: 3px;
+}
+
+.projects img:hover {
+    transform: translate(5px, -3%);
+}
+
+#projects .project-tile span {
+    opacity: 0%;
+    padding: 0 5px;
+}
+
+#projects .project-tile:hover span {
+    opacity: 100%;
+    color: #eebbc3;
+    transition: opacity 0.3s ease-in;
+}
+
+.show-all {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: max-content;
+    margin: auto;
+    padding: 0px 12px;
+    background-color: #0f0e17;
+    color: #fffffe;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.8s ease in;
+}
+
+.show-all:hover {
+    background-color: black;
+    color: #a7a9be;
+
+}
+
+.languages-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh;
+    width: 100%;
+    background-color: #232946;
+}
+
+.languages-section img {
+    width: 90px;
+    margin-top: 70px;
+    transform: scale(0.7);
+    transition: transform 0.5s ease-out;
+}
+
+
+.languages-section img:first-child {
+    margin-right: 50px;
+}
+
+.languages-section img:hover {
+    transform: translate(20px, -40%);
+}
+
+.contact-section {
+    display: grid;
+    justify-content: center;
+    grid-gap: 20px;
+    align-items: center;
+    height: 30vh;
+    width: 100%;
+}
+
+.contact-section h2 {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-section img {
+    width: 40px;
+    margin-left: 20px;
+    justify-content: center;
+}
+
+
+section h1,
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 2;
+}
+
+footer {
+    border-top: 4px solid #f25f4c;
+    background-color: #232946;
+    color: white;
+    font-size: 15px;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+@media only screen and (width <800px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    #projects .project-tile {
+        height: 500px;
+        width: 100%;
+    }
+}
